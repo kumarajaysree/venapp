@@ -1,0 +1,16 @@
+package pack1.Main;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import pack1.bo.TestBean;
+
+public class Main {
+	public static void main(String args[])
+	{
+		ApplicationContext ctx=new ClassPathXmlApplicationContext("applicationContext.xml");
+		TestBean testBean=(TestBean)ctx.getBean("testBean");
+		testBean.readEmps();
+	}
+
+}
